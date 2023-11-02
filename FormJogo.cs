@@ -142,7 +142,7 @@ namespace JogoDaForca
             else
             {
                 // Se a imagem não existir, você pode carregar uma imagem padrão ou exibir uma mensagem de erro.
-                pictureBox1.Image = Image.FromFile("forcas.png");
+                pictureBox1.Image = Image.FromFile("forca.png");
             }
         }
 
