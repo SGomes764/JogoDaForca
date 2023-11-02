@@ -107,6 +107,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::JogoDaForca.Properties.Resources.forca;
             this.pictureBox1.Location = new System.Drawing.Point(53, 157);
             this.pictureBox1.Name = "pictureBox1";
