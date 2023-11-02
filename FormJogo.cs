@@ -30,9 +30,9 @@ namespace JogoDaForca
             // lista de palavras dos temas
             Dictionary<string, List<string>> temas = new Dictionary<string, List<string>>
             {
-                { "Frutas", new List<string> { "banana", "tangerina", "laranja", "uva" } },
-                { "Animais", new List<string> { "gato", "lagarto", "elefante", "caracol" } },
-                { "Cores", new List<string> { "vermelho", "azul", "amarelo", "verde" } }
+                { "Frutas", new List<string> { "banana", "tangerina", "laranja", "uva", "abacate" } },
+                { "Animais", new List<string> { "gato", "lagarto", "elefante", "caracol", "cavalo" } },
+                { "Cores", new List<string> { "vermelho", "azul", "amarelo", "verde", "rosa" } }
             };
 
             // escolher uma palavra aleatoria do tema escolhido
@@ -132,17 +132,18 @@ namespace JogoDaForca
             // Suponha que o PictureBox se chame pictureBoxTentativas.
             // Você pode criar um nome de arquivo de imagem com base no número de tentativas restantes.
             int numeroTentativas = tentativasRestantes; // Obtém o número atual de tentativas.
-            string imagens = $"tentativas_{numeroTentativas}.png";
+            string imagens = $"..\\..\\imagens\\tentativas_{numeroTentativas}.png";
 
             // Verifique se o arquivo de imagem existe antes de atribuí-lo ao PictureBox.
             if (File.Exists(imagens))
             {
                 pictureBox1.Image = Image.FromFile(imagens);
+                pictureBox1.SizeMode= PictureBoxSizeMode.Zoom;
             }
             else
             {
                 // Se a imagem não existir, você pode carregar uma imagem padrão ou exibir uma mensagem de erro.
-                pictureBox1.Image = Image.FromFile("forca.png");
+                pictureBox1.Image = Image.FromFile("..\\..\\imagens\\forca.png");
             }
         }
 
@@ -181,6 +182,11 @@ namespace JogoDaForca
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
